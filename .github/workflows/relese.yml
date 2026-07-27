@@ -22,7 +22,7 @@ jobs:
 
       - name: Install Vercel CLI
         run: npm install -g vercel
-      
+
       - name: Build Next.js application
         run: npm run build
 
