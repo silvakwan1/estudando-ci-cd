@@ -3,7 +3,8 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Estudando CI/CD | Next.js + ESLint + Prettier',
-  description: 'Ambiente de estudos para testes de integração e entrega contínua (CI/CD) com Next.js.',
+  description:
+    'Ambiente de estudos para testes de integração e entrega contínua (CI/CD) com Next.js.',
 };
 
 export default function RootLayout({

@@ -24,7 +24,9 @@ export default function Home() {
       }}
     >
       {/* Header Section */}
-      <header style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <header
+        style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '16px' }}
+      >
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <span className="status-badge">
             <span className="status-dot"></span>
@@ -37,8 +39,16 @@ export default function Home() {
         >
           Estudando CI/CD com Next.js
         </h1>
-        <p style={{ color: 'var(--text-muted)', fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto' }}>
-          Projeto modelo com Next.js (App Router), ESLint e Prettier para testes de integração contínua.
+        <p
+          style={{
+            color: 'var(--text-muted)',
+            fontSize: '1.125rem',
+            maxWidth: '600px',
+            margin: '0 auto',
+          }}
+        >
+          Projeto modelo com Next.js (App Router), ESLint e Prettier para testes de integração
+          contínua.
         </p>
       </header>
 
@@ -51,11 +61,19 @@ export default function Home() {
         }}
       >
         <div className="card">
-          <h2 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '12px', color: 'var(--accent-cyan)' }}>
+          <h2
+            style={{
+              fontSize: '1.25rem',
+              fontWeight: 700,
+              marginBottom: '12px',
+              color: 'var(--accent-cyan)',
+            }}
+          >
             1. ESLint
           </h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '16px' }}>
-            Validação estática de código para evitar erros de sintaxe, tipos ou más práticas em JavaScript e TypeScript.
+            Validação estática de código para evitar erros de sintaxe, tipos ou más práticas em
+            JavaScript e TypeScript.
           </p>
           <pre
             style={{
@@ -71,7 +89,14 @@ export default function Home() {
         </div>
 
         <div className="card">
-          <h2 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '12px', color: 'var(--accent-purple)' }}>
+          <h2
+            style={{
+              fontSize: '1.25rem',
+              fontWeight: 700,
+              marginBottom: '12px',
+              color: 'var(--accent-purple)',
+            }}
+          >
             2. Prettier
           </h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '16px' }}>
@@ -91,11 +116,19 @@ export default function Home() {
         </div>
 
         <div className="card">
-          <h2 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '12px', color: 'var(--accent-pink)' }}>
+          <h2
+            style={{
+              fontSize: '1.25rem',
+              fontWeight: 700,
+              marginBottom: '12px',
+              color: 'var(--accent-pink)',
+            }}
+          >
             3. GitHub Actions
           </h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '16px' }}>
-            Execução automatizada das verificações de linting, formatação e build a cada commit ou pull request.
+            Execução automatizada das verificações de linting, formatação e build a cada commit ou
+            pull request.
           </p>
           <pre
             style={{
@@ -121,7 +154,11 @@ export default function Home() {
         </p>
 
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
-          <button className="btn btn-primary" onClick={runSimulation} disabled={pipelineState === 'running'}>
+          <button
+            className="btn btn-primary"
+            onClick={runSimulation}
+            disabled={pipelineState === 'running'}
+          >
             {pipelineState === 'idle' && '🚀 Executar Verificação CI'}
             {pipelineState === 'running' && '⏳ Verificando Linting & Prettier...'}
             {pipelineState === 'success' && '✅ Todas as Etapas Aprovadas!'}
@@ -142,11 +179,23 @@ export default function Home() {
             }}
           >
             <div style={{ color: '#22c55e' }}>✔ Check format: npm run format:check</div>
-            <div style={{ color: pipelineState === 'running' ? '#eab308' : '#22c55e', marginTop: '6px' }}>
+            <div
+              style={{
+                color: pipelineState === 'running' ? '#eab308' : '#22c55e',
+                marginTop: '6px',
+              }}
+            >
               {pipelineState === 'running' ? '⏳ Running linter...' : '✔ Check lint: npm run lint'}
             </div>
-            <div style={{ color: pipelineState === 'running' ? '#6b7280' : '#22c55e', marginTop: '6px' }}>
-              {pipelineState === 'running' ? '⏳ Pending build...' : '✔ Build project: npm run build'}
+            <div
+              style={{
+                color: pipelineState === 'running' ? '#6b7280' : '#22c55e',
+                marginTop: '6px',
+              }}
+            >
+              {pipelineState === 'running'
+                ? '⏳ Pending build...'
+                : '✔ Build project: npm run build'}
             </div>
           </div>
         )}
