@@ -33,6 +33,8 @@ jobs:
 
       - name: Install the vercel cli
         run: npm install -g vercel
+      - name: Build Next.js application
+        run: npm run build
 
       - name: Pull Vercel Environment
         run: vercel pull --yes --environment=production --token=$VERCEL_TOKEN
