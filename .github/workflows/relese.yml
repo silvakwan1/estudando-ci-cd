@@ -20,9 +20,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install the vercel cli
+      - name: Install the vercel cli      
         run: npm install -g vercel
 
-      - name: Create a vercel config
-        run: vercel pull --yes --token=${{ secrets.VERCEL_TOKEN }}
+      - name: build
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 

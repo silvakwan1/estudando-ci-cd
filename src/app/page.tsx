@@ -28,7 +28,7 @@ export default function Home() {
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <span className="status-badge">
             <span className="status-dot"></span>
-            CI/CD Pipeline Ready
+            CI/CD Pipeline Ready teste 0.1
           </span>
         </div>
         <h1
