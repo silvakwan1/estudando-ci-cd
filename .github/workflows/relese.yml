@@ -23,4 +23,5 @@ jobs:
         run: npm install -g vercel
 
       - name: Create a vercel config
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel pull --yes --token=${{ secrets.VERCEL_TOKEN }}
+
