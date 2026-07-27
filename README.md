@@ -44,11 +44,13 @@ Disparado a cada `push` ou `pull_request` nos branches `main` e `master`.
 
 ### 🚀 CD Pipeline (`.github/workflows/relese.yml`)
 
-Disparado no `push` para branches de produção.
+Disparado no `push` para os branches `main` e `master`.
 
-1. **Pull de Ambientes**: Conecta com a Vercel usando `VERCEL_TOKEN`
-2. **Build de Produção**: `vercel build --prod`
-3. **Deploy Automático**: `vercel deploy --prebuilt --prod`
+1. **Instalação de Dependências**: `npm ci`
+2. **Instalação da Vercel CLI**: `npm install -g vercel`
+3. **Pull do Ambiente Vercel**: `vercel pull --yes --environment=production`
+4. **Build do Artefato na Vercel**: `vercel build --prod`
+5. **Deploy Automático**: `vercel deploy --prebuilt --prod`
 
 #### 🔑 Secrets Necessárias no GitHub:
 
@@ -68,23 +70,17 @@ Disparado no `push` para branches de produção.
 ### Passos:
 
 1. **Clonar o repositório:**
-
    ```bash
    git clone https://github.com/seu-usuario/estudando-ci-cd.git
    cd estudando-ci-cd
    ```
-
 2. **Instalar as dependências:**
-
    ```bash
    npm install
    ```
-
 3. **Iniciar o ambiente de desenvolvimento:**
-
    ```bash
    npm run dev
    ```
-
 4. **Acessar a aplicação:**
    Navegue até [http://localhost:3000](http://localhost:3000) no seu navegador.
