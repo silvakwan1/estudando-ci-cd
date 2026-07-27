@@ -27,7 +27,7 @@ jobs:
         run: npm run build
 
       - name: Pull Vercel Environment
-        run: npm run vercel:var
+        run: 
 
       - name: Build Project Artifacts (Vercel)
         run: npm run vercel:build
